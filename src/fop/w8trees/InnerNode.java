@@ -16,7 +16,7 @@ public class InnerNode<T> implements TreeElement<T> {
     }
 
     @Override
-    public TreeElement<T> insert(T value, Comparator<T> comp) {
+    public InnerNode<T> insert(T value, Comparator<T> comp) {
         if (comp.compare(this.info, value) < 0) { // value < this.value
             this.left = this.left.insert(value, comp);
         } else {

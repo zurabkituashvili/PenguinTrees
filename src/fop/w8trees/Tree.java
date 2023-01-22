@@ -5,6 +5,7 @@ import java.util.function.Predicate;
 public class Tree<T> {
 
     public Tree(Comparator<T> comp) {
+
     }
 
     public void insert(T value) {
@@ -31,7 +32,7 @@ public class Tree<T> {
     }
 
     public T[] getAll(Predicate<T> filter) {
-        // Generics und Arrays vertragen sich nicht besonders gut
+        // Generics and Arrays don't get along very well
         @SuppressWarnings("unchecked")
         T[] array = (T[]) new Object[countMatches(filter)];
         return null;

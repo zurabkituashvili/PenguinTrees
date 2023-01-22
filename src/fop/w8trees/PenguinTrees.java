@@ -16,7 +16,7 @@ public class PenguinTrees {
         return new Tree<Penguin>(new Comparator<Penguin>() {
             @Override
             public int compare(Penguin p1, Penguin p2) {
-                return (int) (p1.getHeight() - p2.getHeight());
+                return (int) Math.signum(p2.getHeight() - p1.getHeight());
             }
         });
     }
